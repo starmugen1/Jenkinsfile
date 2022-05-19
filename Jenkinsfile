@@ -10,6 +10,7 @@ pipeline {
     stage('Deployment') {
       steps {
           echo "Now Deploying"
-    }
-  }
+        }
+      }
+   }
 }
