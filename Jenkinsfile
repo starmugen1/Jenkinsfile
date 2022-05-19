@@ -6,7 +6,7 @@ pipeline {
   steps {
     sh 'mvn --version'
   }
-
+    
   tools {
     maven 'Maven3'
   }
@@ -18,4 +18,4 @@ pipeline {
       }
    }
 }
-}
+
