@@ -1,21 +1,10 @@
 pipeline {
-  agent any
-
-  stages {
-    stage('Build') {
-  steps {
-    sh 'mvn --version'
-  }
-    
-  tools {
-    maven 'Maven3'
-  }
-}
-    stage('Deployment') {
-      steps {
-          echo "Now Deploying"
+    agent { docker { image 'maven:3.8.4-openjdk-11-slim' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'mvn --version'
+            }
         }
-      }
-   }
+    }
 }
-
